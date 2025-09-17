@@ -3,7 +3,7 @@ name: Deploy static site
 on:
   push:
     branches: [ "main" ]   # деплой при пуше в main
-  workflow_dispatch:        # кнопка "Run workflow" вручную
+  workflow_dispatch:        # запуск вручную
 
 jobs:
   deploy:
@@ -24,7 +24,8 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H -p ${SSH_PORT:-22} $DEPLOY_HOST >> ~/.ssh/known_hosts
+          # правильный порядок аргументов: сначала -p, потом host
+          ssh-keyscan -p ${SSH_PORT:-22} -H $DEPLOY_HOST >> ~/.ssh/known_hosts
 
       - name: Deploy via rsync
         env:
