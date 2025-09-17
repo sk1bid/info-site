@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>skbid — Junior DevOps</title>
+  <meta name="description" content="Резюме Junior DevOps: Linux, Docker, GitLab CI, Nginx, WireGuard, Python." />
+  <link rel="icon" href="/assets/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print { a[href]::after{ content:" (" attr(href) ")"; font-weight: normal; font-size: .9em; } }
+  </style>
+  <meta property="og:title" content="skbid — Junior DevOps" />
+  <meta property="og:description" content="Linux • Docker • GitLab CI • Nginx • WireGuard • Python" />
+  <meta property="og:image" content="https://sk1bid.ru/assets/preview.png" />
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Шапка -->
+  <header class="border-b sticky top-0 bg-white/90 backdrop-blur">
+  <div class="mx-auto max-w-5xl px-4 h-14 flex items-center">
+    <div class="font-semibold">skbid</div>
+  </div>
+</header>
+
+  <main class="mx-auto max-w-5xl px-4 py-10 space-y-12">
+    <!-- Hero / Обо мне -->
+    <section id="about" class="space-y-3">
+  <h1 class="text-3xl font-bold">skbid — Junior DevOps</h1>
+  <p class="text-gray-600">Минималистичный одностраничник с ключевой информацией: кто я, чем полезен, чем владею и как связаться.</p>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li><b>Фокус:</b> Docker/Buildx, GitLab CI, Nginx, WireGuard, Python (aiohttp/aiogram)</li>
+    <li><b>Что могу:</b> поднять сервис за TLS-прокси, собрать мультиарх-образ, настроить вебхук/деплой, базовый мониторинг</li>
+  </ul>
+</section>
+
+    <!-- Навыки -->
+    <section id="skills">
+  <h2 class="text-2xl font-bold mb-3">Навыки</h2>
+  <ul class="text-sm text-gray-700 space-y-1 list-disc ml-5">
+    <li>Linux (Debian/Ubuntu), systemd, UFW; базовая сеть (NAT, DNS, MTU, TLS)</li>
+    <li>Docker, Compose, Buildx (amd64/arm64), Registry</li>
+    <li>GitLab CI (dind, кеш, теги, артефакты)</li>
+    <li>Nginx reverse proxy, TLS, rate limit</li>
+    <li>WireGuard: сервер/клиент, маршрутизация</li>
+    <li>Python: aiohttp, aiogram, SQLAlchemy</li>
+  </ul>
+</section>
+
+    <!-- Проекты (3 карточки, по делу) -->
+    <section id="projects">
+      <h2 class="text-2xl font-bold mb-4">Проекты</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <article class="rounded-2xl border p-5">
+          <h3 class="font-semibold">Telegram Gym Bot</h3>
+          <p class="text-sm text-gray-700 mt-1">Вебхук за Nginx (POST-only, rate-limit 10 r/s, burst 20), Docker-образ, CI/CD в GitLab.</p>
+          <ul class="text-sm text-gray-700 mt-2 space-y-1 list-disc ml-5">
+            <li>proxy_pass, TLS, healthz</li>
+            <li>Автодеплой с тегами по коммиту</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl border p-5">
+          <h3 class="font-semibold">Мультиарх Docker Buildx</h3>
+          <p class="text-sm text-gray-700 mt-1">Сборка и публикация образов amd64+arm64 в Registry. Manifest, кеш BuildKit.</p>
+          <ul class="text-sm text-gray-700 mt-2 space-y-1 list-disc ml-5">
+            <li>Теги: commit/semver/latest</li>
+            <li>Параллельные платформы</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl border p-5">
+          <h3 class="font-semibold">WireGuard сервер</h3>
+          <p class="text-sm text-gray-700 mt-1">Диагностика "есть рукопожатия — нет трафика", тюнинг MTU/офлоады.</p>
+          <ul class="text-sm text-gray-700 mt-2 space-y-1 list-disc ml-5">
+            <li>UFW, маршрутизация</li>
+            <li>До 700–800 Мбит на сервере</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Инструменты инфраструктуры / как работаю -->
+    
+
+    <!-- Обучение / опыт -->
+    <section id="edu">
+  <h2 class="text-2xl font-bold mb-3">Обучение</h2>
+  <ul class="text-sm text-gray-700 space-y-1">
+    <li><b>ВУЗ:</b> — (укажи направление)</li>
+    <li><b>Практика:</b> pet‑проекты (CI/CD, сети, контейнеры)</li>
+  </ul>
+</section>
+
+    <!-- Контакты -->
+    <section id="contacts">
+      <h2 class="text-2xl font-bold mb-4">Контакты</h2>
+      <div class="rounded-2xl border p-5">
+        <ul class="text-sm text-gray-700 space-y-2">
+          <li>📧 Email: <a class="text-blue-600 hover:underline" href="mailto:you@example.com">you@example.com</a></li>
+          <li>💻 GitLab: <a class="text-blue-600 hover:underline" href="https://gitlab.com/yourname">gitlab.com/yourname</a></li>
+          <li>💻 GitHub: <a class="text-blue-600 hover:underline" href="https://github.com/yourname">github.com/yourname</a></li>
+          <li>📄 PDF: <em>добавь ссылку на резюме.pdf, если нужно</em></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t">
+    <div class="mx-auto max-w-5xl px-4 py-6 text-sm text-gray-500">
+      © <span id="y"></span> skbid — Junior DevOps
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+
+  <!-- Структурированные данные (минимум) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "skbid",
+    "jobTitle": "Junior DevOps",
+    "url": "https://sk1bid.ru/",
+    "sameAs": ["https://gitlab.com/yourname", "https://github.com/yourname"],
+    "knowsAbout": ["Linux","Docker","GitLab CI","Nginx","WireGuard","Python"]
+  }
+  </script>
+</body>
+</html>
